@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    double a, b;
+    string operation;
+
+    
+    cout << "Enter first number: ";
+    cin >> a;
+
+    cout << "Enter second number: ";
+    cin >> b;
+
+    cout << "Enter operation (add, subtract, multiply, divide): ";
+    cin >> operation;
+
+    if (operation == "add") {
+        cout << "Result: " << a + b << endl;
+    } else if (operation == "subtract") {
+        cout << "Result: " << a - b << endl;
+    } else if (operation == "multiply") {
+        cout << "Result: " << a * b << endl;
+    } else if (operation == "divide") {
+        if (b != 0) {
+            cout << "Result: " << a / b << endl;
+        } else {
+            cout << "Error: Division by zero!" << endl;
+        }
+    } else {
+        cout << "Invalid operation!" << endl;
+    }
+
+    return 0;
+}
