@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a;
+    cout << "Enter a number: ";
+    cin >> a;
+
+    // If 'a' is even then reduce to previous odd number
+    if (a % 2 == 0) {
+        a -= 1;
+    }
+
+    // Printing first 'a' odd numbers
+    for (int i = 0; i < a; i++) {
+        cout << (2 * i + 1);
+        if (i != a - 1) {
+            cout << ", ";
+        }
+    }
+
+    cout << endl;
+    return 0;
+}
